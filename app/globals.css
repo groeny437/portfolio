@@ -15,6 +15,7 @@
   --space-ml: 20px;
   --space-xl: 40px;
   --space-2xl: 80px;
+  --space-side: 5%;
   --font-size-256: 256px;
   --font-size-200: 200px;
   --font-size-120: 120px;
@@ -34,6 +35,25 @@
   --font-size-18: 18px;
   --font-size-16: 16px;
   --font-size-14: 14px;
+  --font-size-num-256: 256;
+  --font-size-num-200: 200;
+  --font-size-num-120: 120;
+  --font-size-num-96: 96;
+  --font-size-num-80: 80;
+  --font-size-num-56: 56;
+  --font-size-num-48: 48;
+  --font-size-num-40: 40;
+  --font-size-num-36: 36;
+  --font-size-num-32: 32;
+  --font-size-num-30: 30;
+  --font-size-num-28: 28;
+  --font-size-num-26: 26;
+  --font-size-num-24: 24;
+  --font-size-num-22: 22;
+  --font-size-num-20: 20;
+  --font-size-num-18: 18;
+  --font-size-num-16: 16;
+  --font-size-num-14: 14;
   --line-height-90: 0.9;
   --line-height-130: 1.3;
   --line-height-150: 1.5;
@@ -64,6 +84,7 @@
   --spacing-ml: var(--space-ml);
   --spacing-xl: var(--space-xl);
   --spacing-2xl: var(--space-2xl);
+  --spacing-side: var(--space-side);
 
   /* font-size */
   --text-256: var(--font-size-256);
@@ -90,10 +111,10 @@
   --leading-130: var(--line-height-130);
   --leading-150: var(--line-height-150);
 
-  --font-regular: var(--font-weight-regular);
-  --font-light: var(--font-weight-light);
-  --font-semibold: var(--font-weight-semibold);
-  --font-bold: var(--font-weight-bold);
+  --font-weight-regular: var(--font-weight-regular);
+  --font-weight-light: var(--font-weight-light);
+  --font-weight-semibold: var(--font-weight-semibold);
+  --font-weight-bold: var(--font-weight-bold);
 }
 
 body {
@@ -105,7 +126,7 @@ body {
 .en-h1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-256) / 1440 * 100vw),
+    calc(var(--font-size-num-256) / 1440 * 100vw),
     var(--font-size-256)
   );
   line-height: var(--line-height-90);
@@ -115,7 +136,7 @@ body {
 .en-h2 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-200) / 1440 * 100vw),
+    calc(var(--font-size-num-200) / 1440 * 100vw),
     var(--font-size-200)
   );
   line-height: var(--line-height-90);
@@ -125,7 +146,7 @@ body {
 .en-h3 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-120) / 1440 * 100vw),
+    calc(var(--font-size-num-120) / 1440 * 100vw),
     var(--font-size-120)
   );
   line-height: var(--line-height-90);
@@ -135,7 +156,7 @@ body {
 .en-h4 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-80) / 1440 * 100vw),
+    calc(var(--font-size-num-80) / 1440 * 100vw),
     var(--font-size-80)
   );
   line-height: var(--line-height-90);
@@ -145,27 +166,18 @@ body {
 .en-t1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-40) / 1440 * 100vw),
+    calc(var(--font-size-num-40) / 1440 * 100vw),
     var(--font-size-40)
   );
   line-height: var(--line-height-90);
   font-weight: var(--font-weight-regular);
 }
 
-.en-t2 {
-  font-size: clamp(
-    1rem,
-    calc(var(--font-size-32) / 1440 * 100vw),
-    var(--font-size-32)
-  );
-  line-height: var(--line-height-130);
-  font-weight: var(--font-weight-semibold);
-}
-
+.en-t2,
 .en-s1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-32) / 1440 * 100vw),
+    calc(var(--font-size-num-32) / 1440 * 100vw),
     var(--font-size-32)
   );
   line-height: var(--line-height-130);
@@ -175,7 +187,7 @@ body {
 .en-b1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-16) / 1440 * 100vw),
+    calc(var(--font-size-num-16) / 1440 * 100vw),
     var(--font-size-16)
   );
   line-height: var(--line-height-130);
@@ -185,7 +197,7 @@ body {
 .point-t1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-32) / 1440 * 100vw),
+    calc(var(--font-size-num-32) / 1440 * 100vw),
     var(--font-size-32)
   );
   line-height: var(--line-height-90);
@@ -195,7 +207,7 @@ body {
 .point-t2 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-24) / 1440 * 100vw),
+    calc(var(--font-size-num-24) / 1440 * 100vw),
     var(--font-size-24)
   );
   line-height: var(--line-height-90);
@@ -205,7 +217,7 @@ body {
 .kr-t1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-56) / 1440 * 100vw),
+    calc(var(--font-size-num-56) / 1440 * 100vw),
     var(--font-size-56)
   );
   line-height: var(--line-height-130);
@@ -215,7 +227,7 @@ body {
 .kr-t2 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-40) / 1440 * 100vw),
+    calc(var(--font-size-num-40) / 1440 * 100vw),
     var(--font-size-40)
   );
   line-height: var(--line-height-130);
@@ -225,7 +237,7 @@ body {
 .kr-t3 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-32) / 1440 * 100vw),
+    calc(var(--font-size-num-32) / 1440 * 100vw),
     var(--font-size-32)
   );
   line-height: var(--line-height-130);
@@ -235,7 +247,7 @@ body {
 .kr-s1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-26) / 1440 * 100vw),
+    calc(var(--font-size-num-26) / 1440 * 100vw),
     var(--font-size-26)
   );
   line-height: var(--line-height-130);
@@ -245,7 +257,7 @@ body {
 .kr-b1 {
   font-size: clamp(
     1rem,
-    calc(var(--font-size-16) / 1440 * 100vw),
+    calc(var(--font-size-num-16) / 1440 * 100vw),
     var(--font-size-16)
   );
   line-height: var(--line-height-150);
@@ -255,43 +267,78 @@ body {
 @media (max-width: 1024px) {
   .en-h1,
   .en-h2 {
-    font-size: 1rem, calc(var(--font-size-96) / 374 * 100vw),
+    font-size: var(--font-size-96);
+  }
+
+  .en-h3 {
+    font-size: var(--font-size-80);
+  }
+
+  .en-h4 {
+    font-size: var(--font-size-48);
+  }
+
+  .en-t1 {
+    font-size: var(--font-size-32);
+  }
+
+  .en-t2 {
+    font-size: var(--font-size-28);
+  }
+  .en-s1 {
+    font-size: var(--font-size-20);
+  }
+  .en-t2 {
+    font-size: var(--font-size-14);
+  }
+  .point-t1 {
+    font-size: var(--font-size-30);
+  }
+  .point-t2 {
+    font-size: var(--font-size-18);
+  }
+}
+
+/* @media (max-width: 1024px) {
+  .en-h1,
+  .en-h2 {
+    font-size: var(--font-size-26), calc(var(--font-size-num-96) / 374 * 100vw),
       var(--font-size-96);
   }
 
   .en-h3 {
-    font-size: 1rem, calc(var(--font-size-80) / 374 * 100vw),
+    font-size: var(--font-size-26), calc(var(--font-size-num-80) / 374 * 100vw),
       var(--font-size-80);
   }
 
   .en-h4 {
-    font-size: 1rem, calc(var(--font-size-48) / 374 * 100vw),
+    font-size: var(--font-size-26), calc(var(--font-size-num-48) / 374 * 100vw),
       var(--font-size-48);
   }
 
   .en-t1 {
-    font-size: 1rem, calc(var(--font-size-32) / 374 * 100vw),
+    font-size: var(--font-size-26), calc(var(--font-size-num-32) / 374 * 100vw),
       var(--font-size-32);
   }
 
   .en-t2 {
-    font-size: 1rem, calc(var(--font-size-28) / 374 * 100vw),
+    font-size: var(--font-size-26), calc(var(--font-size-num-28) / 374 * 100vw),
       var(--font-size-28);
   }
   .en-s1 {
-    font-size: 1rem, calc(var(--font-size-20) / 374 * 100vw),
+    font-size: var(--font-size-26), calc(var(--font-size-num-20) / 374 * 100vw),
       var(--font-size-20);
   }
   .en-t2 {
-    font-size: 0.75rem, calc(var(--font-size-14) / 374 * 100vw),
+    font-size: 0.75rem, calc(var(--font-size-num-14) / 374 * 100vw),
       var(--font-size-14);
   }
   .point-t1 {
-    font-size: 1rem, calc(var(--font-size-30) / 374 * 100vw),
+    font-size: var(--font-size-26), calc(var(--font-size-num-30) / 374 * 100vw),
       var(--font-size-30);
   }
   .point-t2 {
-    font-size: 1rem, calc(var(--font-size-18) / 374 * 100vw),
+    font-size: var(--font-size-26), calc(var(--font-size-num-18) / 374 * 100vw),
       var(--font-size-18);
   }
-}
+} */
