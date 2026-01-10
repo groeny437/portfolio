@@ -1,3 +1,9 @@
+import PortfolioList from "./component/PortfolioList";
+
 export default function PortfolioPage() {
-  return <div>Portfolio</div>;
+  return (
+    <>
+      <PortfolioList />
+    </>
+  );
 }
