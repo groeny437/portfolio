@@ -374,3 +374,8 @@ body {
   vertical-align: middle;
   background-color: black;
 }
+
+.stroke-outer {
+  color: transparent;
+  -webkit-text-stroke: 10px #fff;
+}
