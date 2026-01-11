@@ -43,7 +43,7 @@ export const portfolioData: PortfolioItem[] = [
     id: 1,
     title: "apfel",
     summary: "카페24 기반의 반응형 웹사이트 구축",
-    href: "",
+    href: "https://www.apfelcosmetic.co.kr",
     period: "2025.04 ~2025.05",
     contribution: "UI 디자인 80% ･ 인터렉션 디자인 70%",
     overview: {
@@ -191,7 +191,7 @@ export const portfolioData: PortfolioItem[] = [
     id: 5,
     title: "ooos",
     summary: "디자인 에이전시 웹사이트 리뉴얼",
-    href: "",
+    href: "https://www.ooosdesign.com",
     period: "2025.03 ~ 2025.04",
     contribution: "UI 디자인 100% ･ 기획 100%",
     overview: {
@@ -228,7 +228,7 @@ export const portfolioData: PortfolioItem[] = [
     id: 6,
     title: "younglim",
     summary: "창호 브랜드 반응형 웹사이트 리디자인",
-    href: "",
+    href: "https://www.ylchem.co.kr",
     period: "2025.02 ~ 2025.08",
     contribution: "UI 디자인 95% ･ UX 디자인 95% ･ 기획 70%",
     overview: {

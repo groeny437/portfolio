@@ -365,3 +365,12 @@ body {
   background: url("/ic_star.svg") no-repeat center;
   background-size: cover;
 }
+
+.square-box {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: var(--space-2xs);
+  vertical-align: middle;
+  background-color: black;
+}
