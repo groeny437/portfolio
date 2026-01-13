@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { PortfolioDataProps } from "@/app/lib/data";
 
 export default function WorkOverview({ data }: PortfolioDataProps) {
@@ -11,7 +13,14 @@ export default function WorkOverview({ data }: PortfolioDataProps) {
         <p className="kr-b1 mt-ml mb-20 text-gray-400 max-md:mb-25">
           {data.overview.summary}
         </p>
-        <div className="w-full aspect-78/44 bg-gray-100 rounded-2xl"></div>
+        <div className="w-full aspect-78/44 rounded-2xl relative">
+          <Image
+            src={data.overview.Image}
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
       </article>
     </section>
   );

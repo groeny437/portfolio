@@ -49,7 +49,9 @@ export default function WorkList({ data }: WorkListProps) {
               >
                 <article className="w-full h-full border border-black">
                   <Link href={`/work/${item.id}`} className="w-full h-full">
-                    <div className="bg-gray-200 relative w-full aspect-62/32"></div>
+                    <div className="relative w-full aspect-62/32">
+                      <Image src={item.thumb.pc} alt={item.summary} fill />
+                    </div>
                     <div className="bg-black p-ml">
                       <h2 className="en-s1 text-white uppercase pb-sm border-b border-gray-400">
                         {item.title}

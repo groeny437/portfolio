@@ -1,5 +1,65 @@
 import { StaticImageData } from "next/image";
 
+import OoosOverviewImage from "@/public/img_overview_pc_ooos.png";
+import OoosPcThumbImage from "@/public/img_thumb_pc_ooos.jpg";
+import OoosMoThumbImage from "@/public/img_thumb_mo_ooos.jpg";
+import OoosColorImage from "@/public/img_color_ooos.png";
+import OoosTypoImage from "@/public/img_typography_ooos.png";
+import OoosPcMockupImage from "@/public/img_mockup_pc_1_ooos.png";
+import OoosPcMockupImage1 from "@/public/img_mockup_pc_2_ooos.png";
+import OoosPcMockupImage2 from "@/public/img_mockup_pc_3_ooos.png";
+import OoosPcMockupImage3 from "@/public/img_mockup_pc_4_ooos.png";
+
+import PortfolioOverviewImage from "@/public/img_overview_pc_portfolio.png";
+import PortfolioPcThumbImage from "@/public/img_thumb_pc_portfolio.jpg";
+import PortfolioMoThumbImage from "@/public/img_thumb_mo_portfolio.jpg";
+import PortfolioColorImage from "@/public/img_color_portfolio.png";
+import PortfolioTypoImage from "@/public/img_typography_portfolio.png";
+import PortfolioPcMockupImage from "@/public/img_mockup_pc_1_portfolio.png";
+import PortfolioPcMockupImage1 from "@/public/img_mockup_pc_2_portfolio.png";
+import PortfolioPcMockupImage2 from "@/public/img_mockup_pc_3_portfolio.png";
+import PortfolioPcMockupImage3 from "@/public/img_mockup_pc_4_portfolio.png";
+
+import ApfelOverviewImage from "@/public/img_overview_pc_apfel.png";
+import ApfelPcThumbImage from "@/public/img_thumb_pc_apfel.jpg";
+import ApfelMoThumbImage from "@/public/img_thumb_mo_apfel.jpg";
+import ApfelColorImage from "@/public/img_color_apfel.png";
+import ApfelTypoImage from "@/public/img_typography_apfel.png";
+import ApfelPcMockupImage from "@/public/img_mockup_pc_1_apfel.png";
+import ApfelPcMockupImage1 from "@/public/img_mockup_pc_2_apfel.png";
+import ApfelPcMockupImage2 from "@/public/img_mockup_pc_3_apfel.png";
+import ApfelPcMockupImage3 from "@/public/img_mockup_pc_4_apfel.png";
+
+import AudionOverviewImage from "@/public/img_overview_pc_audion.png";
+import AudionPcThumbImage from "@/public/img_thumb_pc_audion.jpg";
+import AudionMoThumbImage from "@/public/img_thumb_mo_audion.jpg";
+import AudionColorImage from "@/public/img_color_audion.png";
+import AudionTypoImage from "@/public/img_typography_audion.png";
+import AudionPcMockupImage from "@/public/img_mockup_pc_1_audion.png";
+import AudionPcMockupImage1 from "@/public/img_mockup_pc_2_audion.png";
+import AudionPcMockupImage2 from "@/public/img_mockup_pc_3_audion.png";
+import AudionPcMockupImage3 from "@/public/img_mockup_pc_4_audion.png";
+
+import SemugoOverviewImage from "@/public/img_overview_pc_semugo.png";
+import SemugoPcThumbImage from "@/public/img_thumb_pc_semugo.jpg";
+import SemugoMoThumbImage from "@/public/img_thumb_mo_semugo.jpg";
+import SemugoColorImage from "@/public/img_color_semugo.png";
+import SemugoTypoImage from "@/public/img_typography_semugo.png";
+import SemugoPcMockupImage from "@/public/img_mockup_pc_1_semugo.png";
+import SemugoPcMockupImage1 from "@/public/img_mockup_pc_2_semugo.png";
+import SemugoPcMockupImage2 from "@/public/img_mockup_pc_3_semugo.png";
+import SemugoPcMockupImage3 from "@/public/img_mockup_pc_4_semugo.png";
+
+import YounglimOverviewImage from "@/public/img_overview_pc_younglim.png";
+import YounglimPcThumbImage from "@/public/img_thumb_pc_younglim.jpg";
+import YounglimMoThumbImage from "@/public/img_thumb_mo_younglim.jpg";
+import YounglimColorImage from "@/public/img_color_younglim.png";
+import YounglimTypoImage from "@/public/img_typography_younglim.png";
+import YounglimPcMockupImage from "@/public/img_mockup_pc_1_younglim.png";
+import YounglimPcMockupImage1 from "@/public/img_mockup_pc_2_younglim.png";
+import YounglimPcMockupImage2 from "@/public/img_mockup_pc_3_younglim.png";
+import YounglimPcMockupImage3 from "@/public/img_mockup_pc_4_younglim.png";
+
 export type PortfolioDataProps = {
   data: PortfolioItem;
 };
@@ -15,10 +75,14 @@ export interface PortfolioItem {
   href: string;
   period: string;
   contribution: string;
+  thumb: {
+    pc: StaticImageData;
+    mo: StaticImageData;
+  };
   overview: {
     title: string;
     summary: string;
-    Image: StaticImageData | string;
+    Image: StaticImageData;
   };
   insight: {
     summary: string;
@@ -30,11 +94,11 @@ export interface PortfolioItem {
   };
   style: {
     summary: string;
-    Images: StaticImageData[] | string[];
+    Images: StaticImageData[];
   };
   mockup: {
     pc: StaticImageData | string;
-    mobile: StaticImageData[] | string[];
+    mobile: StaticImageData[];
   };
 }
 
@@ -46,11 +110,15 @@ export const portfolioData: PortfolioItem[] = [
     href: "https://www.apfelcosmetic.co.kr",
     period: "2025.04 ~2025.05",
     contribution: "UI 디자인 80% ･ 인터렉션 디자인 70%",
+    thumb: {
+      pc: ApfelPcThumbImage,
+      mo: ApfelMoThumbImage,
+    },
     overview: {
       title: "NATURE, REFINED INTO EXPERIENCE",
       summary:
         "아펠은 자연 유래 성분을 기반으로 한 프리미엄 뷰티 브랜드입니다. 브랜드의 자연주의 감성과 정제된 분위기를 시각적으로 표현하기 위해, 미니멀한 구조와 잔잔한 인터랙션을 중심으로 온라인 쇼핑 경험을 구축했습니다.",
-      Image: "",
+      Image: ApfelOverviewImage,
     },
     insight: {
       summary:
@@ -69,11 +137,11 @@ export const portfolioData: PortfolioItem[] = [
     style: {
       summary:
         "디자인 키워드를 구체적인 시각 언어로 전환하기 위해 스타일 가이드를 구성했습니다. 타이포그래피와 컬러는 브랜드의 톤을 유지하면서도, 다양한 콘텐츠 환경에서 일관되게 작동하도록 설계되었습니다.",
-      Images: [""],
+      Images: [ApfelTypoImage, ApfelColorImage],
     },
     mockup: {
-      pc: "",
-      mobile: [""],
+      pc: ApfelPcMockupImage,
+      mobile: [ApfelPcMockupImage1, ApfelPcMockupImage2, ApfelPcMockupImage3],
     },
   },
   {
@@ -82,12 +150,16 @@ export const portfolioData: PortfolioItem[] = [
     summary: "포트폴리오 사이트 구축",
     href: "",
     period: "2025.11 ~ 2025.12",
-    contribution: "UI 디자인 100% ･인터렉션 디자인 90%",
+    contribution: "UI 디자인 100% ･ 인터렉션 디자인 90%",
+    thumb: {
+      pc: PortfolioPcThumbImage,
+      mo: PortfolioMoThumbImage,
+    },
     overview: {
       title: "DESIGNING A DEVELOPER’S POINT OF VIEW",
       summary:
         "본 프로젝트는 개발자의 강점을 명확히 전달하기 위해 진행한 개인 포트폴리오 웹사이트 제작 작업입니다. 개발자의 작업 방식과 사고 흐름이 자연스럽게 드러나도록 콘텐츠 구조를 설계하고, 디자인과 개발이 연결되는 경험을 중심으로 정보 구조와 UI를 구성했습니다.",
-      Image: "",
+      Image: PortfolioOverviewImage,
     },
     insight: {
       summary:
@@ -106,11 +178,15 @@ export const portfolioData: PortfolioItem[] = [
     style: {
       summary:
         "디자인 키워드를 구체적인 시각 언어로 전환하기 위해 스타일 가이드를 구성했습니다. 타이포그래피와 컬러는 브랜드의 톤을 유지하면서도, 다양한 콘텐츠 환경에서 일관되게 작동하도록 설계되었습니다.",
-      Images: [""],
+      Images: [PortfolioTypoImage, PortfolioColorImage],
     },
     mockup: {
-      pc: "",
-      mobile: [""],
+      pc: PortfolioPcMockupImage,
+      mobile: [
+        PortfolioPcMockupImage1,
+        PortfolioPcMockupImage2,
+        PortfolioPcMockupImage3,
+      ],
     },
   },
   {
@@ -120,11 +196,15 @@ export const portfolioData: PortfolioItem[] = [
     href: "",
     period: "2025.07 ~ 2025.11",
     contribution: "UI 디자인 100% ･ UX 디자인 80% ･ 기획 90%",
+    thumb: {
+      pc: SemugoPcThumbImage,
+      mo: SemugoMoThumbImage,
+    },
     overview: {
       title: "SIMPLIFYING COMPLEX TAX WORKFLOWS",
       summary:
         "세무고는 소상공인과 세무사를 위한 세무 업무 지원 서비스입니다. 기존 세무사 중심의 PC 서비스를 보다 라이트한 형태로 확장해, 소상공인도 직접 세무 업무를 처리할 수 있도록 기획·디자인을 진행했으며, 사용성과 접근성을 중심으로 서비스 경험을 재정비했습니다.",
-      Image: "",
+      Image: SemugoOverviewImage,
     },
     insight: {
       summary:
@@ -143,11 +223,15 @@ export const portfolioData: PortfolioItem[] = [
     style: {
       summary:
         "디자인 키워드를 구체적인 시각 언어로 전환하기 위해 스타일 가이드를 구성했습니다. 타이포그래피와 컬러는 브랜드의 톤을 유지하면서도, 다양한 콘텐츠 환경에서 일관되게 작동하도록 설계되었습니다.",
-      Images: [""],
+      Images: [SemugoTypoImage, SemugoColorImage],
     },
     mockup: {
-      pc: "",
-      mobile: [""],
+      pc: SemugoPcMockupImage,
+      mobile: [
+        SemugoPcMockupImage1,
+        SemugoPcMockupImage2,
+        SemugoPcMockupImage3,
+      ],
     },
   },
   {
@@ -157,11 +241,15 @@ export const portfolioData: PortfolioItem[] = [
     href: "",
     period: "2025.05 ~ 2025.06",
     contribution: "UI 디자인 90% ･ UX 디자인 30% ･ 기획 60%",
+    thumb: {
+      pc: AudionPcThumbImage,
+      mo: AudionMoThumbImage,
+    },
     overview: {
-      title: "BEYOND COMPLEXITY,INTO CLARITY",
+      title: "BEYOND COMPLEXITY, INTO CLARITY",
       summary:
         "오디온은 AI 음성 인식 기술을 제공하는 B2B API 서비스입니다. 기존의 복잡한 UI를 개선하고, 트렌디한 AI 서비스 이미지를 강화하고자 했습니다. 이에 따라 전체 UI 구조를 재정비하고, 브랜드 경험을 강화하는 방향으로 프로젝트를 진행했습니다.",
-      Image: "",
+      Image: AudionOverviewImage,
     },
     insight: {
       summary:
@@ -180,11 +268,15 @@ export const portfolioData: PortfolioItem[] = [
     style: {
       summary:
         "디자인 키워드를 구체적인 시각 언어로 전환하기 위해 스타일 가이드를 구성했습니다. 타이포그래피와 컬러는 브랜드의 톤을 유지하면서도, 다양한 콘텐츠 환경에서 일관되게 작동하도록 설계되었습니다.",
-      Images: [""],
+      Images: [AudionTypoImage, AudionColorImage],
     },
     mockup: {
-      pc: "",
-      mobile: [""],
+      pc: AudionPcMockupImage,
+      mobile: [
+        AudionPcMockupImage1,
+        AudionPcMockupImage2,
+        AudionPcMockupImage3,
+      ],
     },
   },
   {
@@ -194,11 +286,15 @@ export const portfolioData: PortfolioItem[] = [
     href: "https://www.ooosdesign.com",
     period: "2025.03 ~ 2025.04",
     contribution: "UI 디자인 100% ･ 기획 100%",
+    thumb: {
+      pc: OoosPcThumbImage,
+      mo: OoosMoThumbImage,
+    },
     overview: {
       title: "DESIGN BEYOND THE ORDINARY FRAME",
       summary:
         "오오오에스는 브랜드의 메시지를 시각적 경험으로 풀어내는 디자인 스튜디오입니다. 기존 웹사이트의 구조와 콘텐츠 전달 방식을 개선해, 스튜디오의 정체성과 작업 철학이 보다 선명하게 드러나도록 브랜드 메시지를 재정비했습니다.",
-      Image: "",
+      Image: OoosOverviewImage,
     },
     insight: {
       summary:
@@ -217,11 +313,11 @@ export const portfolioData: PortfolioItem[] = [
     style: {
       summary:
         "디자인 키워드를 구체적인 시각 언어로 전환하기 위해 스타일 가이드를 구성했습니다. 타이포그래피와 컬러는 브랜드의 톤을 유지하면서도, 다양한 콘텐츠 환경에서 일관되게 작동하도록 설계되었습니다.",
-      Images: [""],
+      Images: [OoosTypoImage, OoosColorImage],
     },
     mockup: {
-      pc: "",
-      mobile: [""],
+      pc: OoosPcMockupImage,
+      mobile: [OoosPcMockupImage1, OoosPcMockupImage2, OoosPcMockupImage3],
     },
   },
   {
@@ -231,11 +327,15 @@ export const portfolioData: PortfolioItem[] = [
     href: "https://www.ylchem.co.kr",
     period: "2025.02 ~ 2025.08",
     contribution: "UI 디자인 95% ･ UX 디자인 95% ･ 기획 70%",
+    thumb: {
+      pc: YounglimPcThumbImage,
+      mo: YounglimMoThumbImage,
+    },
     overview: {
-      title: "BEYOND THE FRAME,INTO EXPERIENCE",
+      title: "BEYOND THE FRAME, INTO EXPERIENCE",
       summary:
         "영림프라임창호는 프리미엄 창호 제품을 기반으로 주거 환경의 가치를 확장하는 브랜드입니다. 기존 웹사이트의 노후화와 브랜드 경험 개선 요구에 대응해 브랜드 메시지를 재정비하고, 전반적인 정보 구조와 UI를 개선하는 작업을 수행했습니다.",
-      Image: "",
+      Image: YounglimOverviewImage,
     },
     insight: {
       summary:
@@ -254,11 +354,15 @@ export const portfolioData: PortfolioItem[] = [
     style: {
       summary:
         "디자인 키워드를 구체적인 시각 언어로 전환하기 위해 스타일 가이드를 구성했습니다. 타이포그래피와 컬러는 브랜드의 톤을 유지하면서도, 다양한 콘텐츠 환경에서 일관되게 작동하도록 설계되었습니다.",
-      Images: [""],
+      Images: [YounglimTypoImage, YounglimColorImage],
     },
     mockup: {
-      pc: "",
-      mobile: [""],
+      pc: YounglimPcMockupImage,
+      mobile: [
+        YounglimPcMockupImage1,
+        YounglimPcMockupImage2,
+        YounglimPcMockupImage3,
+      ],
     },
   },
 ];

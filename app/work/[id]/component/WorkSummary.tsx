@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { PortfolioDataProps } from "@/app/lib/data";
 
 export default function WorkSummary({ data }: PortfolioDataProps) {
@@ -50,11 +52,15 @@ export default function WorkSummary({ data }: PortfolioDataProps) {
         <div className="w-full border-t border-gray-200 max-md:border-0">
           <article className="inline-block w-1/2 pr-xl pt-xl border-r border-gray-200 max-md:border-0">
             <p className="en-b1 pb-xl uppercase font-regular!">typography</p>
-            <div className="w-full aspect-42/27 bg-gray-100"></div>
+            <div className="w-full aspect-42/27 relative">
+              <Image src={data.style.Images[0]} alt="" fill />
+            </div>
           </article>
           <article className="inline-block w-1/2 pl-xl pt-xl">
             <p className="en-b1 pb-xl uppercase font-regular!">color</p>
-            <div className="w-full aspect-42/27 bg-gray-100"></div>
+            <div className="w-full aspect-42/27 relative">
+              <Image src={data.style.Images[1]} alt="" fill />
+            </div>
           </article>
         </div>
       </article>

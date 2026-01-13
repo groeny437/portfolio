@@ -5,9 +5,19 @@ import { PortfolioDataProps } from "@/app/lib/data";
 
 export default function WorkIntro({ data }: PortfolioDataProps) {
   return (
-    <section className="relative bg-gray-200 w-full h-dvh">
-      {/* <Image /> */}
-      <h1 className="en-h3 capitalize text-white px-side pt-[15vh]">
+    <section className="relative w-full h-dvh">
+      <picture>
+        <source media="(max-width:1024px)" srcSet={data.thumb.mo.src} />
+        <source media="(min-width:1025px)" srcSet={data.thumb.pc.src} />
+        <Image
+          src={data.thumb.pc}
+          alt={data.title}
+          fill
+          className="object-cover"
+        />
+      </picture>
+
+      <h1 className="en-h3 capitalize relative text-white px-side pt-[15vh] z-50">
         {data.title}
       </h1>
       <div className="absolute bottom-20 flex flex-row justify-between px-side items-center w-full max-md:flex-col max-md:items-end">
