@@ -6,7 +6,9 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="flex justify-between fixed z-50 items-end w-full pt-ml px-side max-md:items-center">
-      <h1 className="en-s1 uppercase inline-block text-white">portfolio</h1>
+      <Link href={"/"} className="en-s1 uppercase inline-block text-black">
+        portfolio
+      </Link>
       <nav className="inline-block ml-auto">
         <ul className="inline-flex gap-xs en-b1 capitalize font-medium max-md:hidden ">
           <li className="bg-white border border-gray-200 px-md py-xs rounded-[6.25rem] leading-normal">

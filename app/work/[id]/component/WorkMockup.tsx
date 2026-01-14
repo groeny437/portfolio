@@ -6,7 +6,7 @@ export default function WorkMockup({ data }: PortfolioDataProps) {
   return (
     <section className="pt-[25vh] max-md:pt-0">
       <div className="w-full aspect-145/60 px-[15vw] bg-gray-100 max-md:px-side">
-        <div className="relative top-1/4 w-full aspect-100/57 border-4 border-black rounded-[1.25rem] shadow-gray">
+        <div className="relative top-1/4 w-full aspect-100/57 border-4 border-black rounded-[1.25rem] shadow-gray overflow-hidden">
           <Image src={data.mockup.pc} alt="" fill className="object-cover" />
         </div>
       </div>

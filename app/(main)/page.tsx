@@ -1,3 +1,4 @@
+import { Footer } from "../components/layout";
 import MainVisual from "./component/MainVisual";
 import MainIntro from "./component/MainIntro";
 import MainAbout from "./component/MainAbout";
@@ -10,6 +11,7 @@ export default function MainPage() {
       <MainIntro />
       <MainAbout />
       <MainWork />
+      <Footer />
     </>
   );
 }

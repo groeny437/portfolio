@@ -1,64 +1,58 @@
 import { StaticImageData } from "next/image";
 
-import OoosOverviewImage from "@/public/img_overview_pc_ooos.png";
+import OoosOverviewImage from "@/public/img_overview_ooos.jpg";
 import OoosPcThumbImage from "@/public/img_thumb_pc_ooos.jpg";
 import OoosMoThumbImage from "@/public/img_thumb_mo_ooos.jpg";
 import OoosColorImage from "@/public/img_color_ooos.png";
 import OoosTypoImage from "@/public/img_typography_ooos.png";
-import OoosPcMockupImage from "@/public/img_mockup_pc_1_ooos.png";
-import OoosPcMockupImage1 from "@/public/img_mockup_pc_2_ooos.png";
-import OoosPcMockupImage2 from "@/public/img_mockup_pc_3_ooos.png";
-import OoosPcMockupImage3 from "@/public/img_mockup_pc_4_ooos.png";
+import OoosPcMockupImage1 from "@/public/img_mockup_mo_1_ooos.jpg";
+import OoosPcMockupImage2 from "@/public/img_mockup_mo_2_ooos.jpg";
+import OoosPcMockupImage3 from "@/public/img_mockup_mo_3_ooos.jpg";
 
-import PortfolioOverviewImage from "@/public/img_overview_pc_portfolio.png";
+import PortfolioOverviewImage from "@/public/img_overview_portfolio.jpg";
 import PortfolioPcThumbImage from "@/public/img_thumb_pc_portfolio.jpg";
 import PortfolioMoThumbImage from "@/public/img_thumb_mo_portfolio.jpg";
 import PortfolioColorImage from "@/public/img_color_portfolio.png";
 import PortfolioTypoImage from "@/public/img_typography_portfolio.png";
-import PortfolioPcMockupImage from "@/public/img_mockup_pc_1_portfolio.png";
-import PortfolioPcMockupImage1 from "@/public/img_mockup_pc_2_portfolio.png";
-import PortfolioPcMockupImage2 from "@/public/img_mockup_pc_3_portfolio.png";
-import PortfolioPcMockupImage3 from "@/public/img_mockup_pc_4_portfolio.png";
+import PortfolioPcMockupImage1 from "@/public/img_mockup_mo_1_portfolio.jpg";
+import PortfolioPcMockupImage2 from "@/public/img_mockup_mo_2_portfolio.jpg";
+import PortfolioPcMockupImage3 from "@/public/img_mockup_mo_3_portfolio.jpg";
 
-import ApfelOverviewImage from "@/public/img_overview_pc_apfel.png";
+import ApfelOverviewImage from "@/public/img_overview_apfel.jpg";
 import ApfelPcThumbImage from "@/public/img_thumb_pc_apfel.jpg";
 import ApfelMoThumbImage from "@/public/img_thumb_mo_apfel.jpg";
 import ApfelColorImage from "@/public/img_color_apfel.png";
 import ApfelTypoImage from "@/public/img_typography_apfel.png";
-import ApfelPcMockupImage from "@/public/img_mockup_pc_1_apfel.png";
-import ApfelPcMockupImage1 from "@/public/img_mockup_pc_2_apfel.png";
-import ApfelPcMockupImage2 from "@/public/img_mockup_pc_3_apfel.png";
-import ApfelPcMockupImage3 from "@/public/img_mockup_pc_4_apfel.png";
+import ApfelPcMockupImage1 from "@/public/img_mockup_mo_1_apfel.jpg";
+import ApfelPcMockupImage2 from "@/public/img_mockup_mo_2_apfel.jpg";
+import ApfelPcMockupImage3 from "@/public/img_mockup_mo_3_apfel.jpg";
 
-import AudionOverviewImage from "@/public/img_overview_pc_audion.png";
+import AudionOverviewImage from "@/public/img_overview_audion.jpg";
 import AudionPcThumbImage from "@/public/img_thumb_pc_audion.jpg";
 import AudionMoThumbImage from "@/public/img_thumb_mo_audion.jpg";
 import AudionColorImage from "@/public/img_color_audion.png";
 import AudionTypoImage from "@/public/img_typography_audion.png";
-import AudionPcMockupImage from "@/public/img_mockup_pc_1_audion.png";
-import AudionPcMockupImage1 from "@/public/img_mockup_pc_2_audion.png";
-import AudionPcMockupImage2 from "@/public/img_mockup_pc_3_audion.png";
-import AudionPcMockupImage3 from "@/public/img_mockup_pc_4_audion.png";
+import AudionPcMockupImage1 from "@/public/img_mockup_mo_1_audion.jpg";
+import AudionPcMockupImage2 from "@/public/img_mockup_mo_2_audion.jpg";
+import AudionPcMockupImage3 from "@/public/img_mockup_mo_3_audion.jpg";
 
-import SemugoOverviewImage from "@/public/img_overview_pc_semugo.png";
+import SemugoOverviewImage from "@/public/img_overview_semugo.jpg";
 import SemugoPcThumbImage from "@/public/img_thumb_pc_semugo.jpg";
 import SemugoMoThumbImage from "@/public/img_thumb_mo_semugo.jpg";
 import SemugoColorImage from "@/public/img_color_semugo.png";
 import SemugoTypoImage from "@/public/img_typography_semugo.png";
-import SemugoPcMockupImage from "@/public/img_mockup_pc_1_semugo.png";
-import SemugoPcMockupImage1 from "@/public/img_mockup_pc_2_semugo.png";
-import SemugoPcMockupImage2 from "@/public/img_mockup_pc_3_semugo.png";
-import SemugoPcMockupImage3 from "@/public/img_mockup_pc_4_semugo.png";
+import SemugoPcMockupImage1 from "@/public/img_mockup_mo_1_semugo.jpg";
+import SemugoPcMockupImage2 from "@/public/img_mockup_mo_2_semugo.jpg";
+import SemugoPcMockupImage3 from "@/public/img_mockup_mo_3_semugo.jpg";
 
-import YounglimOverviewImage from "@/public/img_overview_pc_younglim.png";
+import YounglimOverviewImage from "@/public/img_overview_younglim.jpg";
 import YounglimPcThumbImage from "@/public/img_thumb_pc_younglim.jpg";
 import YounglimMoThumbImage from "@/public/img_thumb_mo_younglim.jpg";
 import YounglimColorImage from "@/public/img_color_younglim.png";
 import YounglimTypoImage from "@/public/img_typography_younglim.png";
-import YounglimPcMockupImage from "@/public/img_mockup_pc_1_younglim.png";
-import YounglimPcMockupImage1 from "@/public/img_mockup_pc_2_younglim.png";
-import YounglimPcMockupImage2 from "@/public/img_mockup_pc_3_younglim.png";
-import YounglimPcMockupImage3 from "@/public/img_mockup_pc_4_younglim.png";
+import YounglimPcMockupImage1 from "@/public/img_mockup_mo_1_younglim.jpg";
+import YounglimPcMockupImage2 from "@/public/img_mockup_mo_2_younglim.jpg";
+import YounglimPcMockupImage3 from "@/public/img_mockup_mo_3_younglim.jpg";
 
 export type PortfolioDataProps = {
   data: PortfolioItem;
@@ -72,7 +66,7 @@ export interface PortfolioItem {
   id: number;
   title: string;
   summary: string;
-  href: string;
+  href?: string;
   period: string;
   contribution: string;
   thumb: {
@@ -140,7 +134,7 @@ export const portfolioData: PortfolioItem[] = [
       Images: [ApfelTypoImage, ApfelColorImage],
     },
     mockup: {
-      pc: ApfelPcMockupImage,
+      pc: ApfelOverviewImage,
       mobile: [ApfelPcMockupImage1, ApfelPcMockupImage2, ApfelPcMockupImage3],
     },
   },
@@ -148,7 +142,6 @@ export const portfolioData: PortfolioItem[] = [
     id: 2,
     title: "portfolio",
     summary: "포트폴리오 사이트 구축",
-    href: "",
     period: "2025.11 ~ 2025.12",
     contribution: "UI 디자인 100% ･ 인터렉션 디자인 90%",
     thumb: {
@@ -181,7 +174,7 @@ export const portfolioData: PortfolioItem[] = [
       Images: [PortfolioTypoImage, PortfolioColorImage],
     },
     mockup: {
-      pc: PortfolioPcMockupImage,
+      pc: PortfolioOverviewImage,
       mobile: [
         PortfolioPcMockupImage1,
         PortfolioPcMockupImage2,
@@ -193,7 +186,6 @@ export const portfolioData: PortfolioItem[] = [
     id: 3,
     title: "semugo",
     summary: "세무･노무 서비스 웹사이트 리디자인",
-    href: "",
     period: "2025.07 ~ 2025.11",
     contribution: "UI 디자인 100% ･ UX 디자인 80% ･ 기획 90%",
     thumb: {
@@ -226,7 +218,7 @@ export const portfolioData: PortfolioItem[] = [
       Images: [SemugoTypoImage, SemugoColorImage],
     },
     mockup: {
-      pc: SemugoPcMockupImage,
+      pc: SemugoOverviewImage,
       mobile: [
         SemugoPcMockupImage1,
         SemugoPcMockupImage2,
@@ -271,7 +263,7 @@ export const portfolioData: PortfolioItem[] = [
       Images: [AudionTypoImage, AudionColorImage],
     },
     mockup: {
-      pc: AudionPcMockupImage,
+      pc: AudionOverviewImage,
       mobile: [
         AudionPcMockupImage1,
         AudionPcMockupImage2,
@@ -316,7 +308,7 @@ export const portfolioData: PortfolioItem[] = [
       Images: [OoosTypoImage, OoosColorImage],
     },
     mockup: {
-      pc: OoosPcMockupImage,
+      pc: OoosOverviewImage,
       mobile: [OoosPcMockupImage1, OoosPcMockupImage2, OoosPcMockupImage3],
     },
   },
@@ -324,7 +316,7 @@ export const portfolioData: PortfolioItem[] = [
     id: 6,
     title: "younglim",
     summary: "창호 브랜드 반응형 웹사이트 리디자인",
-    href: "https://www.ylchem.co.kr",
+    href: "http://www.ylchem.co.kr",
     period: "2025.02 ~ 2025.08",
     contribution: "UI 디자인 95% ･ UX 디자인 95% ･ 기획 70%",
     thumb: {
@@ -357,7 +349,7 @@ export const portfolioData: PortfolioItem[] = [
       Images: [YounglimTypoImage, YounglimColorImage],
     },
     mockup: {
-      pc: YounglimPcMockupImage,
+      pc: YounglimOverviewImage,
       mobile: [
         YounglimPcMockupImage1,
         YounglimPcMockupImage2,

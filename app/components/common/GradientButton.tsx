@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 type dataProps = {
@@ -35,7 +37,7 @@ export default function GradientButton({
           >
             {hoverText}
           </span>
-          <i className="star-icon ml-xs"></i>
+          <i className="star-icon ml-xs transition-transform duration-300 ease-out group-hover:rotate-180"></i>
         </Link>
       ) : (
         <div
@@ -51,7 +53,7 @@ export default function GradientButton({
           >
             {hoverText}
           </span>
-          <i className="star-icon ml-xs w-10! h-10!"></i>
+          <i className="star-icon ml-xs w-10! h-10! transition-transform duration-300 ease-out group-hover:rotate-180"></i>
         </div>
       )}
     </>

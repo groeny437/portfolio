@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { PortfolioDataProps } from "@/app/lib/data";
+import GradientButton from "@/app/components/common/GradientButton";
 
 export default function WorkIntro({ data }: PortfolioDataProps) {
   return (
@@ -38,19 +39,14 @@ export default function WorkIntro({ data }: PortfolioDataProps) {
           </li>
         </ul>
         {data.href && (
-          <Link
+          <GradientButton
             href={data.href}
-            target="_blank"
-            className="relative en-t2 px-ml py-sm w-auto h-14 aspect-6/1 box-border flex items-center justify-center bg-white border border-black rounded-[6.25rem] capitalize group max-md:aspect-auto "
-          >
-            <span className="en-t2 gradient-text uppercase transition-opacity duration-300 inline-block group-hover:hidden max-md:hidden">
-              visit website
-            </span>
-            <span className="kr-s1 gradient-text transition-opacity duration-300 hidden group-hover:inline-block max-md:inline-block">
-              웹사이트 방문하기
-            </span>
-            <i className="star-icon ml-xs"></i>
-          </Link>
+            defaultText="visit website"
+            hoverText="웹사이트 방문하기"
+            buttonStyle="px-ml!"
+            defaultTextStyle="en-t2"
+            hoverTextStyle="kr-s1"
+          />
         )}
       </div>
     </section>

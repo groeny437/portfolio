@@ -1,16 +1,16 @@
 import Image from "next/image";
 
+import SectionTitle from "../common/SectionTitle";
+import GradientButton from "../common/GradientButton";
+
 import starIcon from "@/public/ic_star.svg";
 import DotBg from "@/public/bg_contact.svg";
 
 export default function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center w-full h-dvh  relative">
-      <h2 className="flex items-center mb-ml point-t2 text-center text-gray-500 uppercase">
-        <i className="inline-block w-2 h-2 mr-xs bg-black "></i>
-        contact
-      </h2>
-      <div className="en-h4 flex flex-row flex-wrap gap-x-5 justify-center text-center z-10  px-side ">
+      <SectionTitle title="contact" />
+      <div className="en-h4 flex flex-row flex-wrap gap-x-5 justify-center text-center z-10  px-side mt-ml">
         <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm">
           if you
         </span>
@@ -34,7 +34,7 @@ export default function Footer() {
         <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm max-md:leading-15.5">
           click
         </span>
-        <a className="relative inline-flex items-center justify-center px-xl py-sm min-h-[clamp(1rem,calc(var(--font-size-num-80)/1440*100vw),var(--font-size-80))] aspect-4/1 gap-2 bg-white border border-black rounded-[6.25rem] mb-ml bg-[linear-gradient(98deg,#9A9A9A_0%,#434343_50%,#9A9A9A_100%)] bg-clip-text text-transparent capitalize cursor-pointer before:content-['here'] hover:before:content-['여기'] hover:font-bold hover:text-56 max-md:aspect-auto max-md:before:content-['여기'] max-md:text-36 max-md:px-ml max-md:mb-sm max-md:font-semibold">
+        {/* <a className="relative inline-flex items-center justify-center px-xl py-sm min-h-[clamp(1rem,calc(var(--font-size-num-80)/1440*100vw),var(--font-size-80))] aspect-4/1 gap-2 bg-white border border-black rounded-[6.25rem] mb-ml bg-[linear-gradient(98deg,#9A9A9A_0%,#434343_50%,#9A9A9A_100%)] bg-clip-text text-transparent capitalize cursor-pointer before:content-['here'] hover:before:content-['여기'] hover:font-bold hover:text-56 max-md:aspect-auto max-md:before:content-['여기'] max-md:text-36 max-md:px-ml max-md:mb-sm max-md:font-semibold">
           {" "}
           <Image
             src={starIcon}
@@ -43,7 +43,14 @@ export default function Footer() {
             height={40}
             className="inline-block max-md:w-5 max-md:h-5"
           />
-        </a>
+        </a> */}
+        <GradientButton
+          defaultText="here"
+          hoverText="여기"
+          buttonStyle="px-xl mb-ml"
+          defaultTextStyle="en-h4"
+          hoverTextStyle="kr-t1"
+        />
         <span className="basis-full" />
         <span className="uppercase">to connect</span>
       </div>

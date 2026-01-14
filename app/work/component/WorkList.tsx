@@ -20,6 +20,7 @@ export default function WorkList({ data }: WorkListProps) {
   useGSAP(
     () => {
       const tl = gsap.timeline();
+      const mm = gsap.matchMedia();
       const workItems = gsap.utils.toArray<HTMLElement>("li");
       const workListTitle = ".title span";
       const workListSubTitle = ".subtitle";
@@ -60,13 +61,11 @@ export default function WorkList({ data }: WorkListProps) {
           "+=0.5"
         );
 
-      workItems.forEach((item, index) => {
-        const direction = index % 2 === 0 ? 1 : -1;
+      mm.add("(min-width: 1025px)", () => {
+        workItems.forEach((item, index) => {
+          const direction = index % 2 === 0 ? 1 : -1;
 
-        gsap.fromTo(
-          item,
-          { y: 0 },
-          {
+          gsap.to(item, {
             y: 100 * direction,
             ease: "none",
             scrollTrigger: {
@@ -75,8 +74,8 @@ export default function WorkList({ data }: WorkListProps) {
               end: "bottom top",
               scrub: true,
             },
-          }
-        );
+          });
+        });
       });
     },
     { scope: container }
@@ -88,8 +87,8 @@ export default function WorkList({ data }: WorkListProps) {
         <h1 className="title inline-flex flex-wrap items-center en-h3 max-md:w-full">
           <span>M</span>
           <span>y</span>
-          <span className="inline-block  mx-ml">-</span>
-          <span className="max-md:block max-md:w-full max-md:text-end">W</span>
+          <span className="inline-block mx-ml">-</span>
+          <span className=" max-md:text-end">W</span>
           <span>
             <Image
               src={oTextIcon}
