@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-between fixed z-50 items-end w-full pt-ml px-side max-md:items-center">
-      <Link href={"/"} className="en-s1 uppercase inline-block text-black">
+    <header className="header flex justify-between fixed z-50 items-end w-full pt-ml px-side max-md:items-center">
+      <Link href={"/"} className="title en-s1 uppercase inline-block">
         portfolio
       </Link>
       <nav className="inline-block ml-auto">

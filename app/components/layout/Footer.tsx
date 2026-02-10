@@ -11,39 +11,29 @@ export default function Footer() {
     <footer className="flex flex-col items-center justify-center w-full h-dvh  relative">
       <SectionTitle title="contact" />
       <div className="en-h4 flex flex-row flex-wrap gap-x-5 justify-center text-center z-10  px-side mt-ml">
-        <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm">
+        <span className="mb-ml uppercase inline-flex items-center max-md:mb-sm">
           if you
         </span>
         <span className="basis-full hidden max-md:block" />
-        <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm">
+        <span className="mb-ml uppercase inline-flex items-center max-md:mb-sm">
           wish
         </span>
         <span className="basis-full block max-md:hidden" />
-        <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm">
+        <span className="mb-ml uppercase inline-flex items-center max-md:mb-sm">
           to
         </span>
         <span className="basis-full hidden max-md:block" />
-        <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm">
+        <span className="mb-ml uppercase inline-flex items-center max-md:mb-sm">
           reach me,
         </span>
         <span className="basis-full" />
-        <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm">
+        <span className="mb-ml uppercase inline-flex items-center max-md:mb-sm">
           please
         </span>
         <span className="basis-full hidden max-md:block" />
-        <span className="mb-ml uppercase max-md:inline-block max-md:mb-sm max-md:leading-15.5">
+        <span className="mb-ml uppercase inline-flex items-center max-md:mb-sm max-md:leading-15.5">
           click
         </span>
-        {/* <a className="relative inline-flex items-center justify-center px-xl py-sm min-h-[clamp(1rem,calc(var(--font-size-num-80)/1440*100vw),var(--font-size-80))] aspect-4/1 gap-2 bg-white border border-black rounded-[6.25rem] mb-ml bg-[linear-gradient(98deg,#9A9A9A_0%,#434343_50%,#9A9A9A_100%)] bg-clip-text text-transparent capitalize cursor-pointer before:content-['here'] hover:before:content-['여기'] hover:font-bold hover:text-56 max-md:aspect-auto max-md:before:content-['여기'] max-md:text-36 max-md:px-ml max-md:mb-sm max-md:font-semibold">
-          {" "}
-          <Image
-            src={starIcon}
-            alt=""
-            width={40}
-            height={40}
-            className="inline-block max-md:w-5 max-md:h-5"
-          />
-        </a> */}
         <GradientButton
           defaultText="here"
           hoverText="여기"

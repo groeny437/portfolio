@@ -8,6 +8,9 @@ import OoosTypoImage from "@/public/img_typography_ooos.png";
 import OoosPcMockupImage1 from "@/public/img_mockup_mo_1_ooos.jpg";
 import OoosPcMockupImage2 from "@/public/img_mockup_mo_2_ooos.jpg";
 import OoosPcMockupImage3 from "@/public/img_mockup_mo_3_ooos.jpg";
+import OoosKeywordImage1 from "@/public/img_keyword_pc_1_ooos.png";
+import OoosKeywordImage2 from "@/public/img_keyword_pc_2_ooos.png";
+import OoosKeywordImage3 from "@/public/img_keyword_pc_3_ooos.png";
 
 import PortfolioOverviewImage from "@/public/img_overview_portfolio.jpg";
 import PortfolioPcThumbImage from "@/public/img_thumb_pc_portfolio.jpg";
@@ -17,6 +20,9 @@ import PortfolioTypoImage from "@/public/img_typography_portfolio.png";
 import PortfolioPcMockupImage1 from "@/public/img_mockup_mo_1_portfolio.jpg";
 import PortfolioPcMockupImage2 from "@/public/img_mockup_mo_2_portfolio.jpg";
 import PortfolioPcMockupImage3 from "@/public/img_mockup_mo_3_portfolio.jpg";
+import PortfolioKeywordImage1 from "@/public/img_keyword_pc_1_portfolio.png";
+import PortfolioKeywordImage2 from "@/public/img_keyword_pc_2_portfolio.png";
+import PortfolioKeywordImage3 from "@/public/img_keyword_pc_3_portfolio.png";
 
 import ApfelOverviewImage from "@/public/img_overview_apfel.jpg";
 import ApfelPcThumbImage from "@/public/img_thumb_pc_apfel.jpg";
@@ -26,6 +32,9 @@ import ApfelTypoImage from "@/public/img_typography_apfel.png";
 import ApfelPcMockupImage1 from "@/public/img_mockup_mo_1_apfel.jpg";
 import ApfelPcMockupImage2 from "@/public/img_mockup_mo_2_apfel.jpg";
 import ApfelPcMockupImage3 from "@/public/img_mockup_mo_3_apfel.jpg";
+import ApfelKeywordImage1 from "@/public/img_keyword_pc_1_apfel.png";
+import ApfelKeywordImage2 from "@/public/img_keyword_pc_2_apfel.png";
+import ApfelKeywordImage3 from "@/public/img_keyword_pc_3_apfel.png";
 
 import AudionOverviewImage from "@/public/img_overview_audion.jpg";
 import AudionPcThumbImage from "@/public/img_thumb_pc_audion.jpg";
@@ -35,6 +44,9 @@ import AudionTypoImage from "@/public/img_typography_audion.png";
 import AudionPcMockupImage1 from "@/public/img_mockup_mo_1_audion.jpg";
 import AudionPcMockupImage2 from "@/public/img_mockup_mo_2_audion.jpg";
 import AudionPcMockupImage3 from "@/public/img_mockup_mo_3_audion.jpg";
+import AudionKeywordImage1 from "@/public/img_keyword_pc_1_audion.png";
+import AudionKeywordImage2 from "@/public/img_keyword_pc_2_audion.png";
+import AudionKeywordImage3 from "@/public/img_keyword_pc_3_audion.png";
 
 import SemugoOverviewImage from "@/public/img_overview_semugo.jpg";
 import SemugoPcThumbImage from "@/public/img_thumb_pc_semugo.jpg";
@@ -44,6 +56,9 @@ import SemugoTypoImage from "@/public/img_typography_semugo.png";
 import SemugoPcMockupImage1 from "@/public/img_mockup_mo_1_semugo.jpg";
 import SemugoPcMockupImage2 from "@/public/img_mockup_mo_2_semugo.jpg";
 import SemugoPcMockupImage3 from "@/public/img_mockup_mo_3_semugo.jpg";
+import SemugoKeywordImage1 from "@/public/img_keyword_pc_1_semugo.png";
+import SemugoKeywordImage2 from "@/public/img_keyword_pc_2_semugo.png";
+import SemugoKeywordImage3 from "@/public/img_keyword_pc_3_semugo.png";
 
 import YounglimOverviewImage from "@/public/img_overview_younglim.jpg";
 import YounglimPcThumbImage from "@/public/img_thumb_pc_younglim.jpg";
@@ -53,6 +68,9 @@ import YounglimTypoImage from "@/public/img_typography_younglim.png";
 import YounglimPcMockupImage1 from "@/public/img_mockup_mo_1_younglim.jpg";
 import YounglimPcMockupImage2 from "@/public/img_mockup_mo_2_younglim.jpg";
 import YounglimPcMockupImage3 from "@/public/img_mockup_mo_3_younglim.jpg";
+import YounglimKeywordImage1 from "@/public/img_keyword_pc_1_younglim.png";
+import YounglimKeywordImage2 from "@/public/img_keyword_pc_2_younglim.png";
+import YounglimKeywordImage3 from "@/public/img_keyword_pc_3_younglim.png";
 
 export type PortfolioDataProps = {
   data: PortfolioItem;
@@ -126,7 +144,7 @@ export const portfolioData: PortfolioItem[] = [
     design: {
       summary:
         "도출된 인사이트를 바탕으로, 브랜드가 전달하고자 하는 인상을 명확히 정의하기 위한 디자인 키워드를 설정했습니다. 각 키워드는 시각적 표현 전반에 일관되게 적용되어, 브랜드 경험의 방향성을 형성합니다.",
-      Images: [""],
+      Images: [ApfelKeywordImage1, ApfelKeywordImage2, ApfelKeywordImage3],
     },
     style: {
       summary:
@@ -166,7 +184,11 @@ export const portfolioData: PortfolioItem[] = [
     design: {
       summary:
         "도출된 인사이트를 바탕으로, 브랜드가 전달하고자 하는 인상을 명확히 정의하기 위한 디자인 키워드를 설정했습니다. 각 키워드는 시각적 표현 전반에 일관되게 적용되어, 브랜드 경험의 방향성을 형성합니다.",
-      Images: [""],
+      Images: [
+        PortfolioKeywordImage1,
+        PortfolioKeywordImage2,
+        PortfolioKeywordImage3,
+      ],
     },
     style: {
       summary:
@@ -210,7 +232,7 @@ export const portfolioData: PortfolioItem[] = [
     design: {
       summary:
         "도출된 인사이트를 바탕으로, 브랜드가 전달하고자 하는 인상을 명확히 정의하기 위한 디자인 키워드를 설정했습니다. 각 키워드는 시각적 표현 전반에 일관되게 적용되어, 브랜드 경험의 방향성을 형성합니다.",
-      Images: [""],
+      Images: [SemugoKeywordImage1, SemugoKeywordImage2, SemugoKeywordImage3],
     },
     style: {
       summary:
@@ -255,7 +277,7 @@ export const portfolioData: PortfolioItem[] = [
     design: {
       summary:
         "도출된 인사이트를 바탕으로, 브랜드가 전달하고자 하는 인상을 명확히 정의하기 위한 디자인 키워드를 설정했습니다. 각 키워드는 시각적 표현 전반에 일관되게 적용되어, 브랜드 경험의 방향성을 형성합니다.",
-      Images: [""],
+      Images: [AudionKeywordImage1, AudionKeywordImage2, AudionKeywordImage3],
     },
     style: {
       summary:
@@ -300,7 +322,7 @@ export const portfolioData: PortfolioItem[] = [
     design: {
       summary:
         "도출된 인사이트를 바탕으로, 브랜드가 전달하고자 하는 인상을 명확히 정의하기 위한 디자인 키워드를 설정했습니다. 각 키워드는 시각적 표현 전반에 일관되게 적용되어, 브랜드 경험의 방향성을 형성합니다.",
-      Images: [""],
+      Images: [OoosKeywordImage1, OoosKeywordImage2, OoosKeywordImage3],
     },
     style: {
       summary:
@@ -341,7 +363,11 @@ export const portfolioData: PortfolioItem[] = [
     design: {
       summary:
         "도출된 인사이트를 바탕으로, 브랜드가 전달하고자 하는 인상을 명확히 정의하기 위한 디자인 키워드를 설정했습니다. 각 키워드는 시각적 표현 전반에 일관되게 적용되어, 브랜드 경험의 방향성을 형성합니다.",
-      Images: [""],
+      Images: [
+        YounglimKeywordImage1,
+        YounglimKeywordImage2,
+        YounglimKeywordImage3,
+      ],
     },
     style: {
       summary:

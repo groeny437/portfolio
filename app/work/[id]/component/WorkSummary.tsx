@@ -1,15 +1,83 @@
 import Image from "next/image";
+import { useRef } from "react";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/all";
 
 import SectionTitle from "@/app/components/common/SectionTitle";
 
 import { PortfolioDataProps } from "@/app/lib/data";
 
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
 export default function WorkSummary({ data }: PortfolioDataProps) {
+  const container = useRef<HTMLElement | null>(null);
+
+  useGSAP(
+    () => {
+      gsap.set(".header div > p", { autoAlpha: 0 });
+      gsap.set(".header div > p:first-child", { autoAlpha: 1 });
+
+      gsap.fromTo(
+        ".workinsight li span",
+        {
+          autoAlpha: 0,
+        },
+        {
+          autoAlpha: 1,
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top 20%",
+          },
+        },
+      );
+
+      const panels = gsap.utils.toArray<HTMLElement>(".panel");
+      const headerTexts = gsap.utils.toArray<HTMLElement>(".header div > p");
+
+      panels.forEach((panel, i) => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: panel,
+            start: "top top",
+            end: "bottom top",
+            onEnter: () => {
+              gsap.to(headerTexts, { autoAlpha: 0, duration: 0.2 });
+              gsap.to(headerTexts[i], { autoAlpha: 1, duration: 0.2 });
+            },
+
+            onEnterBack: () => {
+              gsap.to(headerTexts, { autoAlpha: 0, duration: 0.2 });
+              gsap.to(headerTexts[i], { autoAlpha: 1, duration: 0.2 });
+            },
+          },
+        });
+      });
+    },
+    { scope: container },
+  );
+
   return (
-    <section className="flex items-start px-[8vw]">
-      <SectionTitle title="insight" style="sticky top-[20vh] max-md:hidden" />
-      <div className="w-2/3 ml-auto  max-md:w-full max-md:px-side">
-        <article className="pb-20 max-md:h-dvh max-md:flex max-md:flex-col max-md:justify-center">
+    <section className="worksummary flex items-start px-[8vw]" ref={container}>
+      <div className="flex mb-ml header w-[30%] sticky top-[20vh] max-md:hidden ">
+        <i className="inline-block w-2 h-2 mr-xs bg-black align-middle"></i>
+        <div className="relative  w-full">
+          <p className="point-t2 absolute top-0 left-0 uppercase text-gray-500">
+            insight
+          </p>
+          <p className="point-t2 absolute top-0 left-0 uppercase text-gray-500">
+            design keyword
+          </p>
+          <p className="point-t2 absolute top-0 left-0 uppercase text-gray-500">
+            style guide
+          </p>
+        </div>
+      </div>
+
+      <div className="workinsight  w-2/3 ml-auto max-md:w-full max-md:px-side">
+        <article className="panel pb-20 max-md:h-dvh max-md:flex max-md:flex-col max-md:justify-center">
           <SectionTitle title="insight" style="md:hidden" />
           <p className="kr-b1 mb-2xl text-gray-400 max-md:mt-4">
             {data.insight.summary}
@@ -35,14 +103,34 @@ export default function WorkSummary({ data }: PortfolioDataProps) {
             </li>
           </ul>
         </article>
-        <article className="pt-20 pb-36 max-md:pt-0 max-md:pb-0 max-md:h-dvh max-md:flex max-md:flex-col max-md:justify-center">
+        <article className="workdesign panel pt-20 pb-36 max-md:pt-0 max-md:pb-0 max-md:h-dvh max-md:flex max-md:flex-col max-md:justify-center">
           <SectionTitle title="design keyword" style="md:hidden" />
           <p className="kr-b1 mb-2xl text-gray-400 max-md:mt-4">
             {data.design.summary}
           </p>
-          <div className="w-full aspect-92/28 bg-gray-100 max-md:aspect-33/28"></div>
+          <div className="w-full aspect-92/28 max-md:aspect-33/28">
+            <div className="flex">
+              <Image
+                src={data.design.Images[0]}
+                alt=""
+                className="w-[calc((100%-80px)/3)]"
+              />
+              <span className="w-10 h-px bg-black inline-block relative top-7.5"></span>
+              <Image
+                src={data.design.Images[1]}
+                alt=""
+                className="w-[calc((100%-80px)/3)] "
+              />
+              <span className="w-10 h-px bg-black inline-block relative top-7.5"></span>
+              <Image
+                src={data.design.Images[2]}
+                alt=""
+                className="w-[calc((100%-80px)/3)]"
+              />
+            </div>
+          </div>
         </article>
-        <article className="pt-36 pb-64 max-md:pt-0 max-md:pb-0 max-md:h-dvh max-md:flex max-md:flex-col max-md:justify-center">
+        <article className="workstyle panel pt-36 pb-64 max-md:pt-0 max-md:pb-0 max-md:h-dvh max-md:flex max-md:flex-col max-md:justify-center">
           <SectionTitle title="style guide" style="md:hidden" />
           <p className="kr-b1 mb-2xl text-gray-400 max-md:mt-4">
             {data.style.summary}

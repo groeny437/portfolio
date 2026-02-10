@@ -40,8 +40,9 @@ export default function GradientButton({
           <i className="star-icon ml-xs transition-transform duration-300 ease-out group-hover:rotate-180"></i>
         </Link>
       ) : (
-        <div
+        <a
           className={`${buttonStyle} relative px-ml py-sm w-auto box-border inline-flex items-center justify-center bg-white border border-black rounded-[6.25rem] capitalize cursor-pointer group max-md:aspect-auto`}
+          href="mailto:yms017466@naver.com"
         >
           <span
             className={`${defaultTextStyle} gradient-text uppercase transition-opacity duration-300 inline-block group-hover:hidden max-md:hidden`}
@@ -54,7 +55,7 @@ export default function GradientButton({
             {hoverText}
           </span>
           <i className="star-icon ml-xs w-10! h-10! transition-transform duration-300 ease-out group-hover:rotate-180"></i>
-        </div>
+        </a>
       )}
     </>
   );
